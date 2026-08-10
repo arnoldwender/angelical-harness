@@ -1,0 +1,35 @@
+#!/usr/bin/env sh
+# The first utterance of the Angelical Harness. Wire this as your harness startup
+# banner so it is the first thing emitted, before any agent acts.
+#   - The Blessing of Saint Benedict (Vade Retro Satana) is FIXED — protection first.
+#   - Below it, a rotating "verbum of the day" drawn from verba.txt (Church Latin).
+#     Edit verba.txt to change or extend the rotating words. See BLESSING.md.
+
+# Resolve verba.txt relative to this script (works from any working directory).
+DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+VERBA="$DIR/../verba.txt"
+
+# --- Fixed anchor: the Blessing of Saint Benedict (always first) ---
+cat <<'EOF'
+
+  ✝  THE ANGELICAL HARNESS  ✝
+
+  Crux Sacra Sit Mihi Lux · Non Draco Sit Mihi Dux
+  Vade Retro Satana · Nunquam Suade Mihi Vana
+  Sunt Mala Quae Libas · Ipse Venena Bibas
+  Crux Sancti Patris Benedicti
+  Pax
+EOF
+
+# --- Rotating verbum of the day (Church Latin), from verba.txt ---
+if [ -f "$VERBA" ]; then
+  N=$(grep -c . "$VERBA")
+  if [ "$N" -gt 0 ]; then
+    # day-of-year, leading zeros stripped (avoids octal parse for 08x/09x)
+    DAY=$(date +%j | sed 's/^0*//')
+    [ -z "$DAY" ] && DAY=0
+    IDX=$(( (DAY % N) + 1 ))
+    VERBUM=$(sed -n "${IDX}p" "$VERBA")
+    [ -n "$VERBUM" ] && printf '\n  ✦ %s\n\n' "$VERBUM"
+  fi
+fi
