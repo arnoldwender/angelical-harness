@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" alt="The Angelical Harness — a conduct codex for AI coding agents" width="100%">
+</p>
+
 # The Angelical Harness
 
 **A conduct codex for AI coding agents — four disciplines, kept under the watch of the
