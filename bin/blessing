@@ -29,7 +29,7 @@ if [ -f "$VERBA" ]; then
     DAY=$(date +%j | sed 's/^0*//')
     [ -z "$DAY" ] && DAY=0
     IDX=$(( (DAY % N) + 1 ))
-    VERBUM=$(sed -n "${IDX}p" "$VERBA")
+    VERBUM=$(grep . "$VERBA" | sed -n "${IDX}p")
     [ -n "$VERBUM" ] && printf '\n  ✦ %s\n\n' "$VERBUM"
   fi
 fi

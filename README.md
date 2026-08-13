@@ -5,7 +5,7 @@
 # The Angelical Harness
 
 **A conduct codex for AI coding agents — four disciplines, kept under the watch of the
-angels. Every run opens with a blessing and closes with one.**
+angels. Every run opens with a blessing; the codex closes with one.**
 
 ## The problem
 
@@ -24,7 +24,7 @@ it is short enough to be remembered under pressure.
 
 ## The four disciplines
 
-Four angels, one per way the work fails, each named for what the angel *does.* Every
+Four figures, one per way the work fails, each named for what it *does* — three archangels and the Guardian. Every
 rule in [CODEX.md](CODEX.md) carries an observable **falsifier** — the one-line
 condition that says it was broken.
 
@@ -98,7 +98,7 @@ there is: each axis is named for the angel whose work it mirrors — Raphael hea
 discerns, Gabriel carries the message, the Guardian keeps the vigil. One word holds a whole
 discipline, and holds it even when the clock is burning.
 
-And the harness opens with the Blessing of Saint Benedict and closes with a benediction —
+And the harness opens every session with the Blessing of Saint Benedict; the Benediction closes [CODEX.md](CODEX.md), not the run —
 because work begun under blessing is work you hold yourself to.
 
 ## How to use
