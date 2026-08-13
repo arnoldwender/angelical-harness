@@ -17,6 +17,21 @@ The Angelical Harness adds the missing layer: a small, memorable **codex of cond
 that rides inside every agent's context and governs *how it behaves until the work is
 truly done.*
 
+## The four disciplines
+
+Four angels, one per way the work fails. Each rule in [CODEX.md](CODEX.md) carries an
+observable **falsifier** — the one-line condition that says it was broken.
+
+- **Raphael — the Healing** *(cleanliness)* — what you leave behind: the state of the code after you pass through it.
+- **Michael — the Discernment** *(judgment)* — how you decide under pressure: the gleaming shortcut is an alarm, not an accelerator.
+- **Gabriel — the Message** *(honesty)* — how you report: the true state, carried unchanged, nothing invented.
+- **The Guardian — the Vigil** *(persistence)* — whether you abandon the work: an error is not the end of the turn.
+
+**Precedence: Michael › the Guardian › Raphael** — judgment before persistence before
+tidiness. **Gabriel is never traded** for any of the three. And the Vigil endures
+*technical* walls only: it stops at a legitimate gate — an approval you lack, an evidence
+checkpoint, a hard rule.
+
 ## Two layers, cleanly split
 
 | Layer | Named by | What it is |
@@ -62,6 +77,33 @@ because work begun under blessing is work you hold yourself to.
 3. Let the axes stay *always active*: no trigger phrase, every session, every
    sub-agent. Intensity scales to the task (a hotfix heals the minimum; an audit only
    reports).
+
+## The first word
+
+At the start of a session the harness speaks one first word — protection before the work.
+It is a **fixed blessing**, then a **rotating verbum of the day** drawn from
+[`verba.txt`](verba.txt).
+
+**Fixed** — the Blessing of Saint Benedict (*Vade Retro Satana*), in the public-domain
+Latin of the medal:
+
+> Crux Sacra Sit Mihi Lux · Non Draco Sit Mihi Dux
+> Vade Retro Satana · Nunquam Suade Mihi Vana
+> Sunt Mala Quae Libas · Ipse Venena Bibas
+> Crux Sancti Patris Benedicti
+> Pax
+
+**Then, rotating** — one line of Church Latin, changing daily:
+
+> Soli Deo gloria — To God alone the glory
+
+> Ora et labora — Pray and work
+
+> Spes non confundit — Hope does not disappoint
+
+The prayer never changes — protection is not optional; the verbum rotates. The full pool,
+with translations, is in [BLESSING.md](BLESSING.md); the emitter is
+[`bin/blessing`](bin/blessing).
 
 ## Repository
 

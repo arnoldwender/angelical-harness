@@ -43,8 +43,17 @@ Benedict prayer never changes (protection is not optional); the verbum rotates d
 Edit [`verba.txt`](verba.txt) to change or extend the pool — one `Latin — English` per
 line. The current pool (curate it as you wish):
 
-> Soli Deo gloria · Ad maiorem Dei gloriam · Ora et labora · Ut in omnibus glorificetur
-> Deus · Fiat voluntas tua · Veni, Sancte Spiritus · Lux in tenebris lucet · Dominus
-> illuminatio mea · Non nobis, Domine · Sursum corda · Pax et bonum · Spes non confundit
+> - Soli Deo gloria — To God alone the glory
+> - Ad maiorem Dei gloriam — For the greater glory of God
+> - Ora et labora — Pray and work
+> - Ut in omnibus glorificetur Deus — That in all things God may be glorified
+> - Fiat voluntas tua — Thy will be done
+> - Veni, Sancte Spiritus — Come, Holy Spirit
+> - Lux in tenebris lucet — The light shines in the darkness
+> - Dominus illuminatio mea — The Lord is my light
+> - Non nobis, Domine, sed nomini tuo da gloriam — Not to us, O Lord, but to your name give glory
+> - Sursum corda — Lift up your hearts
+> - Pax et bonum — Peace and good
+> - Spes non confundit — Hope does not disappoint
 
 *The harness emits this blessing first, on startup — `bin/blessing`.*
