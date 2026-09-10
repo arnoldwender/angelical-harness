@@ -141,4 +141,28 @@ The Vigil's persistence is for technical obstacles, not for legitimate gates. A 
 
 ---
 
+## Sources for the epigraphs
+
+Each axis above opens with an epigraph. Some are quotations; some are this repo's own prose with a scriptural reference beside it. The two are not the same thing, and until this section existed nothing in the repo said which was which.
+
+Every quotation in this repo now has a provenance file in [`sources/`](sources/) recording the work, the edition it was matched against, the public-domain status **per jurisdiction**, and — where the answer was not clean — exactly what could not be confirmed. [`gate/citations.py`](gate/citations.py) refuses any attributed quotation that does not resolve to one. The epigraphs are repeated here as attributed lines so the gate can actually read them; set as they are above, inside italics without a blockquote, they were invisible to it.
+
+Measured 2026-09-10:
+
+> - *"I walked with you on the road, and gave back the light of your eyes."* — the Raphael epigraph above, a composition **after** the Book of Tobit and not a verse from it. Raphael names himself at Tobit 12:15, travels with Tobias through chapters 5–12, and restores Tobit's sight at 11:7–15; *God has healed* is the Hebrew etymology of the name, not a line of the book. See [`sources/tobit-raphael.yml`](sources/tobit-raphael.yml).
+> - *"I am Gabriel, who stands in the presence of God, and I am sent to speak unto thee."* — a **modernised** King James of Luke 1:19, matching no published edition. The 1611 text reads *"I am Gabriel, that stand in the presence of God; and am sent to speak unto thee"*; the Douay-Rheims reads *"I am Gabriel, who stand before God: and am sent to speak to thee"*. See [`sources/bible-kjv-gabriel.yml`](sources/bible-kjv-gabriel.yml).
+> - *"Beside each believer stands an angel as protector and shepherd, leading him to life."* — Catechism of the Catholic Church §336, quoting St. Basil the Great, *Adversus Eunomium* III, 1 (PG 29, 656B). Quoted verbatim and **under copyright**: see the notice below. St. Basil's 4th-century original is free everywhere; the 1994 English is not. See [`sources/catechism-336.yml`](sources/catechism-336.yml).
+
+**Michael's epigraph, which the gate cannot reach.** *"Quis ut Deus?" — "Who is like God?"* is the literal Latin of the Hebrew name *mi-ka-el*: traditional on Michael's shield in Western art, and the motto of the Bavarian Order of Saint Michael from 1693. It is **not** in Revelation 12:7, Daniel 12:1 or Jude 9. Those three are the passages *about* Michael — all three were checked and all three are correctly cited — but the Latin sits in quotation marks immediately before them, which reads as an attribution it does not have. It is thirteen characters long, below the gate's floor, so this paragraph is the only enforcement it gets. See [`sources/michael-quis-ut-deus.yml`](sources/michael-quis-ut-deus.yml).
+
+The remaining epigraph lines — *the messenger of the annunciation, who delivers the true word, exactly*, *the guardian angel who never leaves your side*, and their longer forms here — are this repo's own prose. The references beside them (Luke 1:26–38, Matthew 18:10, Daniel 12:1, Jude 9) were checked and are correct; see [`sources/bible-kjv-angel-passages.yml`](sources/bible-kjv-angel-passages.yml).
+
+**What else the gate does not reach.** Five of the twelve rotating verba in [BLESSING.md](BLESSING.md) — *Soli Deo gloria*, *Fiat voluntas tua*, *Ora et labora*, *Sursum corda*, *Pax et bonum* — are shorter than the gate's eighteen-character floor for a quotation, so it reads seven of the twelve and is silent about the other five. All twelve are recorded in [`sources/verba-latina.yml`](sources/verba-latina.yml) regardless. A clean run of the citation gate on this repo means seven of those twelve plus the epigraphs listed above — not everything — and saying so is the Gabriel axis applied to the gate itself.
+
+### Copyright notice
+
+Excerpts from the English translation of the *Catechism of the Catholic Church* copyright © 1994, United States Catholic Conference, Inc.—Libreria Editrice Vaticana. Used with permission. All rights reserved. This notice is required by the terms under which the passage in §336 above is quoted, and it does **not** travel under this repository's MIT licence — anyone reusing that sentence inherits the condition with it.
+
+---
+
 *The Codex is prose, not code — drop it into a system prompt, an AGENTS.md, or a CLAUDE.md and it works as written, no parser required. The angels name the discipline; the engineering names the machinery. A harness is only as good as the discipline of the agents inside it.*

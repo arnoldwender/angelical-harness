@@ -38,6 +38,21 @@ jobs:
       - name: Install
         run: python -m pip install --upgrade pip pytest
 
+      # Placed first, before anything writes a receipt or touches an mtime. It
+      # reads the tree and writes only a .sarif, which report_truth already
+      # excludes from "newest source", so it cannot disturb the ordering below.
+      # PyYAML is deliberately NOT installed: the gate carries a fallback parser
+      # for exactly this container, and running it here is what keeps that path
+      # from rotting unnoticed.
+      - name: Citation gate (every quotation traces to sources/)
+        run: python3 gate/citations.py --sarif citations.sarif
+
+      - name: Citation gate, online (manual runs only)
+        # Link rot is worth knowing about and is never a reason to block a commit
+        # that did not touch the link.
+        if: github.event_name == 'workflow_dispatch'
+        run: python3 gate/citations.py --online
+
       # ORDER MATTERS, and the gate is the reason. The mutation runner rewrites
       # gate/report_truth.py and restores it, which moves that file's mtime. Run
       # it AFTER the receipts and every receipt is instantly older than the last
@@ -83,4 +98,12 @@ jobs:
         with:
           name: report-truth-sarif
           path: report-truth.sarif
+          if-no-files-found: ignore
+
+      - name: Upload citation SARIF
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: citations-sarif
+          path: citations.sarif
           if-no-files-found: ignore

@@ -1,0 +1,45 @@
+# The fixed blessing the harness prints before any agent acts.
+#
+# Verified 2026-09-10 against the standard account of the Saint Benedict Medal.
+# All six expansions in BLESSING.md match letter for letter:
+#
+#   CSPB     Crux Sancti Patris Benedicti
+#   CSSML    Crux Sacra Sit Mihi Lux
+#   NDSMD    Non Draco Sit Mihi Dux
+#   VRSNSMV  Vade Retro Satana, Nunquam Suade Mihi Vana
+#   SMQLIVB  Sunt Mala Quae Libas, Ipse Venena Bibas
+#   PAX      Pax
+#
+# The initials on the medal are older than their reading: their meaning had been
+# lost until a manuscript of 1415 was found at the Benedictine abbey of Metten
+# around 1647 and supplied the wording. The formula is therefore attested from
+# 1415 at the latest, five centuries before any copyright term could begin.
+#
+# The English in BLESSING.md is the repo's own rendering of the Latin, and it is
+# faithful. One word is a choice rather than a match: `dux` is rendered "guide"
+# where the usual English of the medal has "overlord" or "leader". Both are the
+# word; neither is wrong; it is recorded because the repo prints the English
+# beside the Latin and a reader may compare it against a holy card.
+work: "The Blessing of Saint Benedict (Vade Retro Satana), reverse of the Saint Benedict Medal"
+author: "Anonymous - medieval Benedictine formula, no attributable author"
+author_born: "unknown - anonymous medieval formula"
+author_died: "unknown - anonymous medieval formula"
+year: 1415
+edition: "Attested in a manuscript of 1415 held at Metten Abbey, Bavaria, rediscovered there c. 1647; the initials appear on the medal from the 17th century onward."
+pd_status_us: "A 15th-century anonymous Latin formula - public domain."
+pd_status_eu: "Anonymous and medieval, five centuries beyond any term - public domain."
+source_url: "https://en.wikipedia.org/wiki/Saint_Benedict_Medal"
+provenance: verified
+quotes:
+  - "Crux Sacra Sit Mihi Lux"
+  - "Non Draco Sit Mihi Dux"
+  - "Vade Retro Satana"
+  - "Nunquam Suade Mihi Vana"
+  - "Sunt Mala Quae Libas"
+  - "Ipse Venena Bibas"
+  - "Crux Sancti Patris Benedicti"
+  - "Crux Sacra Sit Mihi Lux, Non Draco Sit Mihi Dux, Vade Retro Satana, Nunquam Suade Mihi Vana, Sunt Mala Quae Libas, Ipse Venena Bibas, Crux Sancti Patris Benedicti, Pax"
+  - "May the Holy Cross be my light - may the dragon never be my guide."
+  - "Begone, Satan - never tempt me with your vanities."
+  - "What you offer me is evil - drink the poison yourself."
+  - "The Cross of our Holy Father Benedict."

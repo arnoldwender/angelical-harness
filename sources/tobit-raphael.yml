@@ -1,0 +1,45 @@
+# A COMPOSITION IN QUOTATION MARKS. The repo already says so, in one word.
+#
+# REFERENCE.md prints, in quotation marks:
+#
+#   "I am Raphael - 'God has healed.' I walked with you on the road, and gave
+#    back the light of your eyes."
+#
+# and CODEX.md prints a shorter cousin of it. Both carry the attribution
+# "after the Book of Tobit", and "after" is the honest word: this is a sentence
+# composed for the codex out of what Tobit records, not a verse from it.
+#
+# What Tobit actually contains, and every part of the composition is drawn from
+# one of these:
+#   - Tobit 12:15, where the angel names himself: "I am Raphael, one of the
+#     seven holy angels" (Douay-Rheims and King James Apocrypha).
+#   - Tobit 5-12, the journey: Raphael travels with Tobias as his companion and
+#     brings him home.
+#   - Tobit 11:7-15, the healing: the gall of the fish restores Tobit's sight.
+# "God has healed" is not a line of Tobit at all - it is the Hebrew etymology of
+# the name Raphael, rapha-el.
+#
+# So the sentence is faithful to the book and is not in the book. The word
+# "after" carries that, and it is the reason this entry is marked rather than
+# corrected. But the quotation marks pull the other way, and a reader who skips
+# the attribution will take it for a verse. That tension is the finding.
+#
+# The Book of Tobit is deuterocanonical: in the Catholic and Orthodox canons,
+# in the King James Apocrypha, absent from Protestant Bibles. That is why the
+# repo says "the Book of Tobit" rather than citing chapter and verse, and it is
+# a defensible choice, not an omission.
+work: "The Book of Tobit - a composition after Tobit 12:15, 11:7-15 and the journey of chapters 5 to 12"
+author: "Anonymous - the Book of Tobit, deuterocanonical, composed c. 225-175 BC"
+author_born: "unknown - anonymous Second Temple text, no author to date"
+author_died: "unknown - anonymous Second Temple text, no author to date"
+year: -200
+edition: "Greek and Aramaic originals, c. 225-175 BC. Present in the Catholic and Orthodox canons, in the Vulgate, and in the King James Apocrypha of 1611."
+pd_status_us: "An anonymous text of the 2nd century BC - public domain."
+pd_status_eu: "Anonymous and ancient - public domain. No modern translation is quoted here, so no translator's term applies."
+source_url: "https://en.wikisource.org/wiki/Bible_(King_James)/Tobit"
+provenance: unverified
+provenance_note: "The book, the events and the etymology were all confirmed: Raphael names himself at Tobit 12:15, travels with Tobias through chapters 5 to 12, and the sight is restored at 11:7-15; 'God has healed' is the Hebrew etymology of the name and not a line of the text. What could NOT be confirmed is the sentence itself, because there is nothing to confirm it against - it is a composition written for this codex, and no edition of Tobit prints it. The repo marks it 'after the Book of Tobit', which is the right word; the quotation marks around it are what make this worth recording."
+quotes:
+  - "I am Raphael - 'God has healed.' I walked with you on the road, and gave back the light of your eyes."
+  - "God has healed. He mended Tobit's sight, yet was sent to walk Tobias safely home."
+  - "The healer who mends what is broken, yet was sent to walk the traveler safely home."

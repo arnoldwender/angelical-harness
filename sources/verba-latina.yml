@@ -1,0 +1,90 @@
+# The twelve rotating verba. All twelve are Latin tags of two to seven words,
+# every one of them older than any surviving copyright, and five of them are
+# Vulgate. Located and checked one by one on 2026-09-10:
+#
+#   Soli Deo gloria                              Reformation-era doxological
+#                                                motto, 16th century.
+#   Ad maiorem Dei gloriam                       Jesuit motto, from Ignatius of
+#                                                Loyola, 16th century.
+#   Ora et labora                                NOT in the Rule of Saint
+#                                                Benedict and not attested in
+#                                                Benedictine use before the 19th
+#                                                century; popularised by Abbot
+#                                                Maurus Wolter. The repo calls
+#                                                the pool "Church Latin" and does
+#                                                not attribute it to Benedict,
+#                                                so nothing here is misstated -
+#                                                but anyone who assumes it is in
+#                                                the Rule is mistaken, and the
+#                                                assumption is common.
+#   Ut in omnibus glorificetur Deus              Rule of Saint Benedict,
+#                                                chapter 57, itself quoting
+#                                                1 Peter 4:11.
+#   Fiat voluntas tua                            Vulgate, Matthew 6:10 -
+#                                                "Adveniat regnum tuum ; fiat
+#                                                voluntas tua, sicut in caelo et
+#                                                in terra." Verified.
+#   Veni, Sancte Spiritus                        Opening of the Pentecost
+#                                                sequence, 13th century.
+#   Lux in tenebris lucet                        Vulgate, John 1:5 - "et lux in
+#                                                tenebris lucet et tenebrae eam
+#                                                non comprehenderunt." Verified.
+#   Dominus illuminatio mea                      Vulgate, Psalm 26:1 in the
+#                                                Vulgate numbering (Psalm 27:1
+#                                                in the Hebrew) - "Dominus
+#                                                illuminatio mea et salus mea ;
+#                                                quem timebo ?" Verified.
+#   Non nobis, Domine, sed nomini tuo da gloriam Vulgate, Psalm 113:9 in the
+#                                                Vulgate numbering (Psalm 115:1
+#                                                in the Hebrew) - "Non nobis,
+#                                                Domine, non nobis ; sed nomini
+#                                                tuo da gloriam." The repo drops
+#                                                the second "non nobis", which is
+#                                                an elision, not an error.
+#                                                Verified.
+#   Sursum corda                                 Dialogue of the Roman Canon,
+#                                                attested from the 3rd century.
+#   Pax et bonum                                 Franciscan greeting, 13th
+#                                                century.
+#   Spes non confundit                           Vulgate, Romans 5:5 - "spes
+#                                                autem non confundit". Verified.
+#
+# WHAT THE GATE CANNOT ENFORCE HERE, SAID OUT LOUD.
+# The shared gate ignores any quotation shorter than eighteen normalised
+# characters, on the ground that a fragment that short is not a claim. Five of
+# these twelve fall under that floor - Soli Deo gloria (15), Fiat voluntas tua
+# (17), Ora et labora (13), Sursum corda (12), Pax et bonum (12) - so the gate
+# reads seven of the twelve and is structurally silent about the rest. They are
+# recorded here anyway, in full, because provenance is the point and the gate is
+# only the enforcement. A "0 findings" from the citation gate on this repo means
+# seven of these twelve, not all of them.
+#
+# The English beside each Latin tag is the repo's own gloss, not a quotation
+# from a published translation. For the five Vulgate tags a public-domain
+# English exists (Douay-Rheims, 1582-1610) and differs in wording; the repo's
+# glosses are the ordinary English of the phrases as mottoes, which is what they
+# are being used as.
+work: "Twelve Latin verba - Vulgate verses, liturgical formulae and religious mottoes"
+author: "Various - Vulgate (Jerome), the Rule of Saint Benedict, the Roman liturgy, and religious mottoes of the 13th to 16th centuries"
+author_born: "various - see the per-line notes above; the youngest is 16th century"
+author_died: "various - see the per-line notes above; the youngest is 16th century"
+year: 1592
+edition: "The five scriptural tags follow the Latin Vulgate, standardised in the Sixto-Clementine edition of 1592. The rest are liturgical or motto Latin of the 3rd to 19th centuries, as itemised above."
+pd_status_us: "Every line is a Latin tag first attested between the 3rd and the 19th century; all are far older than 1930 - public domain."
+pd_status_eu: "Anonymous, liturgical or 16th-century in origin, and in the case of Jerome's Vulgate ancient. No line has a rights holder - public domain."
+source_url: "https://biblehub.com/vul/john/1.htm"
+provenance: verified
+provenance_note: "Every line was located. The recorded caveats are three and none of them is a fabrication: Ora et labora is a 19th-century motto rather than a line of the Rule of Saint Benedict; the Non nobis line elides a repeated 'non nobis' present in the Vulgate; and the English glosses are the repo's own, not quotations from the Douay-Rheims or any other published translation. Separately, five of the twelve are shorter than the gate's eighteen-character floor and are therefore recorded here but not enforced by it."
+quotes:
+  - "Soli Deo gloria"
+  - "Ad maiorem Dei gloriam"
+  - "Ora et labora"
+  - "Ut in omnibus glorificetur Deus"
+  - "Fiat voluntas tua"
+  - "Veni, Sancte Spiritus"
+  - "Lux in tenebris lucet"
+  - "Dominus illuminatio mea"
+  - "Non nobis, Domine, sed nomini tuo da gloriam"
+  - "Sursum corda"
+  - "Pax et bonum"
+  - "Spes non confundit"
