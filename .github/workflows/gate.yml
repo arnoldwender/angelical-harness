@@ -57,6 +57,11 @@ jobs:
       # gate/report_truth.py and restores it, which moves that file's mtime. Run
       # it AFTER the receipts and every receipt is instantly older than the last
       # source edit — this job would fire the stale-green finding on itself.
+      - name: Mutation check for the citation gate (do its tests defend it?)
+        # Separate from the repo's own mutation runner above: two gates, two
+        # runners, so a stale anchor in one cannot quietly disable the other.
+        run: python3 tests/mutation_check_citations.py
+
       - name: Mutation check (do the tests defend the gate?)
         run: python3 tests/mutation_check.py
 
