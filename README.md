@@ -161,6 +161,111 @@ with translations, is in [BLESSING.md](BLESSING.md); the emitter is
   under the Codex.
 - **[EXAMPLE.md](EXAMPLE.md)** — a worked before/after: same model, same task, opposite
   outcome — the axis firing.
+- **[gate/report_truth.py](gate/report_truth.py)** — Gabriel's falsifier, executable: it
+  refuses a report that claims more than the run supports. See below.
+- **[bin/conduct-receipt](bin/conduct-receipt)** — the evidence layer the gate reads. Wraps
+  any command and writes down its real exit code.
+- **[tests/](tests/)** — the suite, plus
+  [`mutation_check.py`](tests/mutation_check.py), which deletes each check in turn and
+  requires the suite to go red.
+
+## Gabriel's falsifier, executable
+
+The Codex says every rule carries a falsifier. Three of the four axes already had a
+machine that could return one — a build, a test run, a linter. **Gabriel did not,** and
+Gabriel is the axis this repo marks *never traded.* Honesty was the single discipline
+with nothing behind it but goodwill.
+
+[`gate/report_truth.py`](gate/report_truth.py) is the missing machine. It reads the
+report an agent hands back and refuses every claim it cannot redeem.
+
+### Why a receipt, and not the transcript
+
+The obvious place to check whether a gate passed is the agent's own session
+transcript. It is not in there.
+
+> **Measured over 25 Claude Code session transcripts: 462 Bash tool results, and
+> ZERO of them carry the command's exit code.**
+
+The transcript records that a command ran and what it printed. It does not record
+whether it *succeeded.* So any honesty check that parses the transcript to decide "did
+it actually pass?" is broken — and broken in the worst direction. It finds no evidence
+of failure and reports clean, when what it found was no evidence at all. It fails
+**open,** which is the one thing a gate on honesty may never do.
+
+The remedy is not a better parser. It is a receipt: the gate writes down its own
+verdict as it runs.
+
+```sh
+bin/conduct-receipt run check  -- python3 scripts/check.py
+bin/conduct-receipt run pytest -- python3 -m pytest tests/ -q
+```
+
+Each invocation appends one JSON line to `.conduct/receipts.jsonl` carrying the real
+exit code, the tree sha, the duration, and a hash plus the tail of the output. The
+wrapped command's exit code is propagated untouched, so putting a gate under a receipt
+never changes what that gate decides. Then hand the report over:
+
+```sh
+python3 gate/report_truth.py --report HANDBACK.md
+python3 gate/report_truth.py --report HANDBACK.md --sarif truth.sarif
+cat HANDBACK.md | python3 gate/report_truth.py
+```
+
+Exit `0` clean · `1` findings · `2` the gate itself failed. The third code is not
+decoration: a checker that returns `1` when it crashed reads as "I found something",
+and one that returns `0` reads as "clean". `.conduct/` is git-ignored — a receipt is
+evidence of a run on one machine, never shared state, and a committed one would let
+your green vouch for someone else's code.
+
+### What it refuses
+
+| Rule | It refuses |
+| --- | --- |
+| `fabricated-path` | a cited path that exists nowhere in the tree |
+| `unknown-symbol` | a backticked identifier (`some_function`, `doThing()`) that appears nowhere in the tree |
+| `unbacked-number` | a number with a unit — "23 tests", "0 errors", "12%" — that no receipt's output contains |
+| `unbacked-error-block` | a quoted error block that is not verbatim in some receipt's output |
+| `unbacked-green` | **the one that matters** — "the tests pass" with no green receipt behind it, *or* with a green receipt older than the last source edit |
+| `contradicted-green` | a green claim while some tool's most recent receipt came back non-zero |
+| `corrupt-receipt` | a receipts line that cannot be read — reported, never silently skipped |
+
+`unbacked-green` is the reason the rest exists. A green from three commits ago says
+nothing about today's code, and the difference between "it passed" and "it passed
+before I changed everything underneath it" is not a judgement call — it is a timestamp
+comparison, and a machine should be the one making it.
+
+### What it deliberately does not treat as a claim
+
+A gate with a false-positive rate on its own documentation gets deleted in a week, and
+deserves to be. These are not findings, and each has a test:
+
+- a path inside a fenced code block — that is an example, not an assertion;
+- a version or a date (`v0.1.1`, `Python 3.12`, `2026-09-10`) — a version is not a count;
+- a quotation, blockquoted or inline — the Codex saying "verified" is the Codex speaking;
+- a conditional or a plan — "this *would* make the tests pass" is not a verdict;
+- **a negated claim** — "the tests do NOT pass", "not verified yet". Reporting a failure
+  is the exact opposite of fabricating a success, and a gate that punished a confession
+  would teach an agent to stop confessing.
+
+Anything left over goes in `.conduct/report-allow.txt`, one token per line.
+
+### What this does NOT automate — read this before trusting it
+
+One axis of four, and half of that one.
+
+**Gabriel is partially covered.** The gate catches the *mechanical* lies: the invented
+path, the count from nowhere, the stale green, the checkmark over a red run. It cannot
+catch a report of true sentences arranged to mislead, or a silence exactly where the
+ugly part belonged.
+
+**Raphael, Michael and the Guardian are not covered at all.** Nothing here measures
+whether you left the file cleaner than you found it, whether you stopped at the gleaming
+shortcut, or whether you quit early. Those remain conduct, held by the agent, checked by
+a reader.
+
+Saying so is not a caveat bolted onto the section. It *is* the axis: name what you could
+not verify, and never let UNCERTAIN wear the face of CONFIRMED.
 
 ## Status
 

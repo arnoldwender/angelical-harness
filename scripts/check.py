@@ -57,6 +57,35 @@ def pool_path():
 
 
 def emitter_path():
+    """The script in bin/ that reads the rotation pool.
+
+    Discovery used to be "the single file in bin/". That is only a discriminant
+    while bin/ carries exactly one script; the day the repo ships a second tool
+    there (bin/conduct-receipt), the check that verifies the emitter reports that
+    it cannot find one — a discovery accident read as a broken promise.
+
+    The pool is the real discriminant: the emitter is the script that opens it.
+    The old rule stays as the fallback, so a repo whose bin/ holds a single
+    script behaves exactly as before. This narrows nothing — a bin/ that used to
+    resolve still resolves, to the same file.
+    """
+    d = os.path.join(ROOT, "bin")
+    pool = pool_path()
+    if os.path.isdir(d) and pool:
+        needle = os.path.basename(pool)
+        hits = []
+        for f in sorted(os.listdir(d)):
+            if f.startswith("."):
+                continue
+            p = os.path.join(d, f)
+            try:
+                with open(p, encoding="utf-8", errors="replace") as fh:
+                    if needle in fh.read():
+                        hits.append(p)
+            except OSError:
+                continue
+        if len(hits) == 1:
+            return hits[0]
     return find_one("bin", lambda f: not f.startswith("."))
 
 

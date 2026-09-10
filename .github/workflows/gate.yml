@@ -1,0 +1,86 @@
+# Gabriel, the axis this repo marks never traded, says the state you hand back is
+# the true state. This job is that axis turned on the repo itself: it runs the
+# real gates under a receipt, makes the report-truth gate judge a handback against
+# those receipts, and then proves the gate has teeth by feeding it one that lies.
+#
+# No step interpolates untrusted input into a shell. The only expressions in the
+# file are `github.workflow` and `github.ref` inside `concurrency`, neither of
+# which ever reaches a `run:`.
+name: gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  # A new push on the same branch cancels the previous run: without this a burst
+  # of commits pays for N runs and only the last one matters.
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  report-truth:
+    name: report-truth gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: python -m pip install --upgrade pip pytest
+
+      # ORDER MATTERS, and the gate is the reason. The mutation runner rewrites
+      # gate/report_truth.py and restores it, which moves that file's mtime. Run
+      # it AFTER the receipts and every receipt is instantly older than the last
+      # source edit — this job would fire the stale-green finding on itself.
+      - name: Mutation check (do the tests defend the gate?)
+        run: python3 tests/mutation_check.py
+
+      - name: Self-check, under a receipt
+        run: bin/conduct-receipt run check -- python3 scripts/check.py
+
+      - name: Tests, under a receipt
+        run: bin/conduct-receipt run pytest -- python3 -m pytest tests/ -q
+
+      - name: The gate, against a handback the receipts have to back
+        run: |
+          python3 gate/report_truth.py \
+            --report gate/sample-handback.md --sarif report-truth.sarif
+
+      # A gate nobody has watched go red is a belief. This step is the falsifier:
+      # a handback citing a file that does not exist and a count no run produced
+      # must come back 1 — not 0 (fails open) and not 2 (the gate itself broke).
+      - name: The falsifier — a fabricated handback must be REJECTED
+        run: |
+          cat > fabricated-handback.md <<'EOF'
+          # Handback
+
+          Rewrote gate/zzz_does_not_exist.py and the suite grew to 987654 tests.
+          EOF
+          set +e
+          python3 gate/report_truth.py --report fabricated-handback.md
+          code=$?
+          set -e
+          rm -f fabricated-handback.md
+          if [ "$code" -ne 1 ]; then
+            echo "the gate returned $code for a fabricated handback; expected 1" >&2
+            exit 1
+          fi
+          echo "the gate rejected the fabricated handback, as it must"
+
+      - name: Upload SARIF
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: report-truth-sarif
+          path: report-truth.sarif
+          if-no-files-found: ignore
