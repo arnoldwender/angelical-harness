@@ -45,8 +45,8 @@ translator_died: "not applicable - a committee of forty-seven translators, all d
 pd_status_us: "The 1611 King James Version is public domain in the United States."
 pd_status_eu: "Public domain in the EU and everywhere outside the United Kingdom. Inside the UK the King James Version remains under perpetual Crown copyright, administered by Cambridge University Press; that is a UK-only restriction and does not reach a repository published from Germany."
 source_url: "https://en.wikisource.org/wiki/Bible_(King_James)/Luke"
-provenance: unverified
+provenance: verified
 provenance_note: "The locus is right - Luke 1:19 is where Gabriel names himself. What could NOT be confirmed is the wording: the repo's sentence is a modernised King James, and no published edition prints it. The King James reads 'I am Gabriel, that stand in the presence of God; and am sent to speak unto thee'; the Douay-Rheims reads 'I am Gabriel, who stand before God: and am sent to speak to thee'. The repo's line is neither, and it is set in quotation marks under a verse reference, which tells a reader it is one."
 quotes:
-  - "I am Gabriel, who stands in the presence of God, and I am sent to speak unto thee."
+  - "I am Gabriel, that stand in the presence of God; and am sent to speak unto thee."
   - "And the angel answering said unto him, I am Gabriel, that stand in the presence of God; and am sent to speak unto thee, and to shew thee these glad tidings."

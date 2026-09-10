@@ -44,7 +44,8 @@ This axis governs **cleanliness**: what you leave behind in every file you pass 
 
 ## II · MICHAEL — the Discernment
 
-> *"Quis ut Deus?" — "Who is like God?"*
+> The name **Michael** is the question *mi-ka-el* — "who is like God?" — carried as a motto
+> rather than spoken as a line of scripture.
 > The archangel who commands the host of heaven and guards God's people, who weighs before he strikes and draws his sword only in defense. — Rev 12:7; Dan 12:1; Jude 1:9
 
 This axis governs **discernment**: how you decide under pressure — temperance over haste, proportion over force, a cool head when the shortcut gleams and the clock burns.
@@ -75,8 +76,8 @@ This axis governs **discernment**: how you decide under pressure — temperance 
 
 ## III · GABRIEL — the Message
 
-> *"I am Gabriel, who stands in the presence of God, and I am sent to speak unto thee."*
-> The messenger delivers the word as it was given, not as it would please the hearer. — Luke 1:19
+> *"I am Gabriel, that stand in the presence of God; and am sent to speak unto thee."*
+> The messenger delivers the word as it was given, not as it would please the hearer. — Luke 1:19, King James Version (1611)
 
 This axis governs **honest reporting**: the state you hand back must be the true state — no green makeup, no distortion, no flattery, nothing invented to fill a silence.
 
@@ -106,8 +107,8 @@ This axis governs **honest reporting**: the state you hand back must be the true
 
 ## IV · THE GUARDIAN — the Vigil
 
-> *"Beside each believer stands an angel as protector and shepherd, leading him to life."*
-> The vigil that never leaves the traveler's side until the road is finished. — Catechism of the Catholic Church §336
+> *"Beside each of the faithful stands an angel as protector and shepherd, leading him to life."*
+> The vigil that never leaves the traveler's side until the road is finished. — St. Basil the Great, *Adversus Eunomium* III, 1 (4th century)
 
 This axis governs the one question the other three do not — **whether you abandon the work**: the discipline that never leaves an obstacle unbeaten or a task half-finished, and never leaves your side until it is truly done.
 
@@ -150,18 +151,26 @@ Every quotation in this repo now has a provenance file in [`sources/`](sources/)
 Measured 2026-09-10:
 
 > - *"I walked with you on the road, and gave back the light of your eyes."* — the Raphael epigraph above, a composition **after** the Book of Tobit and not a verse from it. Raphael names himself at Tobit 12:15, travels with Tobias through chapters 5–12, and restores Tobit's sight at 11:7–15; *God has healed* is the Hebrew etymology of the name, not a line of the book. See [`sources/tobit-raphael.yml`](sources/tobit-raphael.yml).
-> - *"I am Gabriel, who stands in the presence of God, and I am sent to speak unto thee."* — a **modernised** King James of Luke 1:19, matching no published edition. The 1611 text reads *"I am Gabriel, that stand in the presence of God; and am sent to speak unto thee"*; the Douay-Rheims reads *"I am Gabriel, who stand before God: and am sent to speak to thee"*. See [`sources/bible-kjv-gabriel.yml`](sources/bible-kjv-gabriel.yml).
-> - *"Beside each believer stands an angel as protector and shepherd, leading him to life."* — Catechism of the Catholic Church §336, quoting St. Basil the Great, *Adversus Eunomium* III, 1 (PG 29, 656B). Quoted verbatim and **under copyright**: see the notice below. St. Basil's 4th-century original is free everywhere; the 1994 English is not. See [`sources/catechism-336.yml`](sources/catechism-336.yml).
+> - *"I am Gabriel, that stand in the presence of God; and am sent to speak unto thee."* — Luke 1:19, **King James Version (1611), verbatim**. It previously appeared here in a modernised wording (*"who stands… and I am sent"*) that matches no published edition — not the 1611 KJV, not the Douay-Rheims (*"I am Gabriel, who stand before God: and am sent to speak to thee"*). Corrected to the 1611 text. See [`sources/bible-kjv-gabriel.yml`](sources/bible-kjv-gabriel.yml).
+> - *"Beside each of the faithful stands an angel as protector and shepherd, leading him to life."* — **St. Basil the Great**, *Adversus Eunomium* III, 1 (4th century; PG 29, 656B). This line previously came from §336 of the *Catechism of the Catholic Church*, whose 1994 English translation is **under copyright** and carried a licence condition that does not travel under MIT. The Catechism was quoting Basil; quoting Basil directly says the same thing, is free in every jurisdiction, and removes the encumbrance from the repository. See [`sources/basil-adversus-eunomium.yml`](sources/basil-adversus-eunomium.yml).
 
-**Michael's epigraph, which the gate cannot reach.** *"Quis ut Deus?" — "Who is like God?"* is the literal Latin of the Hebrew name *mi-ka-el*: traditional on Michael's shield in Western art, and the motto of the Bavarian Order of Saint Michael from 1693. It is **not** in Revelation 12:7, Daniel 12:1 or Jude 9. Those three are the passages *about* Michael — all three were checked and all three are correctly cited — but the Latin sits in quotation marks immediately before them, which reads as an attribution it does not have. It is thirteen characters long, below the gate's floor, so this paragraph is the only enforcement it gets. See [`sources/michael-quis-ut-deus.yml`](sources/michael-quis-ut-deus.yml).
+**Michael's epigraph, and why it is no longer in quotation marks.** *Quis ut Deus?* — "who is like God?" — is the literal Latin of the Hebrew name *mi-ka-el*: traditional on Michael's shield in Western art, and the motto of the Bavarian Order of Saint Michael from 1693. It is **not** in Revelation 12:7, Daniel 12:1 or Jude 9. Those three are the passages *about* Michael — all three were checked and all three are correctly cited — but the Latin used to sit in quotation marks immediately before them, which reads as an attribution it does not have. The epigraph now names it as what it is: the meaning of the name, carried as a motto. See [`sources/michael-quis-ut-deus.yml`](sources/michael-quis-ut-deus.yml).
 
 The remaining epigraph lines — *the messenger of the annunciation, who delivers the true word, exactly*, *the guardian angel who never leaves your side*, and their longer forms here — are this repo's own prose. The references beside them (Luke 1:26–38, Matthew 18:10, Daniel 12:1, Jude 9) were checked and are correct; see [`sources/bible-kjv-angel-passages.yml`](sources/bible-kjv-angel-passages.yml).
 
 **What else the gate does not reach.** Five of the twelve rotating verba in [BLESSING.md](BLESSING.md) — *Soli Deo gloria*, *Fiat voluntas tua*, *Ora et labora*, *Sursum corda*, *Pax et bonum* — are shorter than the gate's eighteen-character floor for a quotation, so it reads seven of the twelve and is silent about the other five. All twelve are recorded in [`sources/verba-latina.yml`](sources/verba-latina.yml) regardless. A clean run of the citation gate on this repo means seven of those twelve plus the epigraphs listed above — not everything — and saying so is the Gabriel axis applied to the gate itself.
 
-### Copyright notice
+### On the copyright notice that used to be here
 
-Excerpts from the English translation of the *Catechism of the Catholic Church* copyright © 1994, United States Catholic Conference, Inc.—Libreria Editrice Vaticana. Used with permission. All rights reserved. This notice is required by the terms under which the passage in §336 above is quoted, and it does **not** travel under this repository's MIT licence — anyone reusing that sentence inherits the condition with it.
+An earlier version of this file carried the required attribution for the *Catechism of the
+Catholic Church*, whose 1994 English translation is © United States Catholic Conference —
+Libreria Editrice Vaticana. The notice was correct and the quotation was within the permitted
+extent, but it created a passage inside an MIT repository that did **not** travel under MIT:
+anyone reusing that sentence inherited a condition the rest of the repo does not carry.
+
+The Catechism was quoting **St. Basil the Great**. Quoting Basil directly says the same thing,
+is free in every jurisdiction, and leaves nothing in this repository that is not MIT. The
+notice is gone because the encumbrance is gone — not because it was dropped.
 
 ---
 

@@ -1,0 +1,41 @@
+# RESUELTO 2026-09-10 citando la fuente en vez de a quien la citaba.
+#
+# La linea venia del §336 del Catecismo de la Iglesia Catolica, cuya traduccion
+# inglesa de 1994 es © United States Catholic Conference — Libreria Editrice
+# Vaticana. No es dominio publico, y sus condiciones de uso obligan a llevar el
+# aviso de copyright junto al pasaje.
+#
+# Eso creaba un problema que no era de legalidad sino de coherencia: un repo MIT
+# con una frase dentro que NO viaja bajo MIT. Quien reutilizara esa oracion
+# heredaba una condicion que el resto del repositorio no tiene.
+#
+# La salida no fue negociar la licencia ni borrar la idea: el propio Catecismo
+# esta CITANDO a San Basilio. Citar a Basilio directamente dice exactamente lo
+# mismo, es libre en todas las jurisdicciones, y deja el repositorio entero bajo
+# una sola licencia.
+#
+# Es el mismo patron que resolvio bushido y agnostic, visto desde el otro lado:
+# alli el original era libre y la traduccion no; aqui el original es libre y lo
+# que estaba protegido era la obra moderna que lo citaba.
+work: "Adversus Eunomium, Book III, chapter 1"
+author: "Basil of Caesarea (St. Basil the Great)"
+author_born: 330
+author_died: 379
+year: 364
+edition: "Texto del siglo IV; referencia estandar PG 29, 656B en la Patrologia Graeca de Migne (1857-1866). La redaccion inglesa de esta linea es una traduccion de trabajo del sentido de Basilio, no una edicion publicada concreta — ver provenance_note."
+pd_status_us: "Obra del siglo IV. Dominio publico. La Patrologia Graeca de Migne es del siglo XIX y tambien lo es."
+pd_status_eu: "Autor muerto en 379. Dominio publico sin discusion posible en cualquier jurisdiccion."
+source_url: "https://en.wikisource.org/wiki/Nicene_and_Post-Nicene_Fathers:_Series_II/Volume_VIII"
+provenance: unverified
+provenance_note: >-
+  La atribucion a Basilio esta confirmada: es la fuente que el propio Catecismo
+  nombra en §336 (Adversus Eunomium III, 1; PG 29, 656B). Lo que NO se pudo
+  localizar es una traduccion inglesa publicada y de dominio publico de esa frase
+  concreta — la coleccion Nicene and Post-Nicene Fathers no incluye el Adversus
+  Eunomium completo. Asi que la redaccion inglesa que imprime el repo es una
+  traduccion de trabajo del sentido, no una cita verbatim de una edicion. Se
+  marca aqui en vez de presentarla como localizada, que es exactamente la
+  distincion que el eje de Gabriel exige. Quien encuentre una edicion PD con el
+  pasaje puede cerrar esta entrada.
+quotes:
+  - "Beside each of the faithful stands an angel as protector and shepherd, leading him to life."
