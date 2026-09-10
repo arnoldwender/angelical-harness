@@ -1,0 +1,52 @@
+# THE QUOTATION MARKS ARE THE PROBLEM. The words are not the King James text.
+#
+# REFERENCE.md prints, in quotation marks and under the reference "Luke 1:19":
+#
+#   "I am Gabriel, who stands in the presence of God, and I am sent to speak
+#    unto thee."
+#
+# The King James Version of Luke 1:19, verified 2026-09-10 against the Wikisource
+# text of the 1611 translation, reads:
+#
+#   "And the angel answering said unto him, I am Gabriel, that stand in the
+#    presence of God; and am sent to speak unto thee, and to shew thee these
+#    glad tidings."
+#
+# Two changes, both silent: "that stand" became "who stands", and the semicolon
+# plus "am sent" became a comma plus "I am sent". Neither alters the meaning.
+# Both make it a sentence no edition prints, set inside quotation marks under a
+# chapter-and-verse reference, which is precisely how a reader is told that what
+# follows is the text.
+#
+# The Douay-Rheims, the other public-domain English and the natural one for a
+# Catholic repo, does not match it either: "I am Gabriel, who stand before God:
+# and am sent to speak to thee, and to bring thee these good tidings."
+#
+# So the modernisation belongs to no edition. It is kept and marked rather than
+# quietly swapped, because swapping it would change what the repo says without
+# anyone being told - and because the honest fix is a decision about which
+# translation this codex wants to speak in, which is not a decision a citation
+# audit gets to make.
+#
+# The King James Version is a special case in the United Kingdom, where it is
+# held under perpetual Crown copyright exercised by Cambridge University Press;
+# outside the UK it is public domain everywhere, and the repo is published from
+# Germany. That is recorded rather than glossed, because "the KJV is public
+# domain" is one of those sentences that is true in the place most people say it
+# and false in the place it came from.
+work: "The Gospel of Luke 1:19, King James Version"
+author: "Luke the Evangelist"
+author_born: "unknown - 1st century, no datable birth"
+author_died: "unknown - 1st century, no datable death"
+year: 1611
+edition: "King James Version, 1611. The wording printed in REFERENCE.md is a modernisation of it and matches neither the KJV nor the Douay-Rheims."
+translator: "The translators of the King James Version, 1611"
+translator_died: "not applicable - a committee of forty-seven translators, all dead since the 17th century; no single death year applies and none is invented here"
+pd_status_us: "The 1611 King James Version is public domain in the United States."
+pd_status_eu: "Public domain in the EU and everywhere outside the United Kingdom. Inside the UK the King James Version remains under perpetual Crown copyright, administered by Cambridge University Press; that is a UK-only restriction and does not reach a repository published from Germany."
+source_url: "https://en.wikisource.org/wiki/Bible_(King_James)/Luke"
+provenance: unverified
+provenance_note: "The locus is right - Luke 1:19 is where Gabriel names himself. What could NOT be confirmed is the wording: the repo's sentence is a modernised King James, and no published edition prints it. The King James reads 'I am Gabriel, that stand in the presence of God; and am sent to speak unto thee'; the Douay-Rheims reads 'I am Gabriel, who stand before God: and am sent to speak to thee'. The repo's line is neither, and it is set in quotation marks under a verse reference, which tells a reader it is one."
+quotes:
+  - "I am Gabriel, who stands in the presence of God, and I am sent to speak unto thee."
+  - "And the angel answering said unto him, I am Gabriel, that stand in the presence of God; and am sent to speak unto thee, and to shew thee these glad tidings."

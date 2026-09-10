@@ -152,7 +152,14 @@ with translations, is in [BLESSING.md](BLESSING.md); the emitter is
 - **[CODEX.md](CODEX.md)** — the canonical core (v1.0): four axes, ~4 rules each, a
   **falsifier** per rule, and a paste-ready block for `AGENTS.md`. Closing: the Benediction.
 - **[REFERENCE.md](REFERENCE.md)** — the full expansion (~12 rules per axis) for depth
-  and citation.
+  and citation. Its closing section, **[Sources for the epigraphs](REFERENCE.md#sources-for-the-epigraphs)**,
+  says which axis epigraphs are quotations and which are this repo's own prose — a
+  distinction nothing in the repo drew until it was written down.
+- **[sources/](sources/)** — a provenance file per quotation: work, edition, translator,
+  a checkable URL, and public-domain status **per jurisdiction**.
+  **[gate/citations.py](gate/citations.py)** refuses any attributed quotation that does not
+  resolve to one. It is the single piece of gate logic shared verbatim across the
+  conduct-harness family, because a fabricated citation is the same defect in every idiom.
 - **[codex-block.md](codex-block.md)** — the paste-ready conduct block (the single source
   the hook and your `AGENTS.md` share).
 - **[hooks/](hooks/)** — `session-start.sh`: opens every session blessed and keeps the

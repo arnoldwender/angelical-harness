@@ -1,0 +1,50 @@
+# The scriptural references the axis epigraphs point at, checked so that the
+# references themselves are known to be right even where the epigraph beside
+# them is the repo's own prose rather than a quotation.
+#
+# Verified 2026-09-10 against the King James text:
+#
+#   Matthew 18:10  "Take heed that ye despise not one of these little ones; for
+#     I say unto you, That in heaven their angels do always behold the face of
+#     my Father which is in heaven."
+#     Cited in CODEX.md beside the Guardian. Correct: this is the passage the
+#     doctrine of the guardian angel rests on.
+#
+#   Daniel 12:1  "And at that time shall Michael stand up, the great prince
+#     which standeth for the children of thy people..."
+#     Cited beside Michael. Correct.
+#
+#   Luke 1:26-38  The annunciation, opening "And in the sixth month the angel
+#     Gabriel was sent from God unto a city of Galilee, named Nazareth".
+#     Cited beside Gabriel in CODEX.md. Correct as the pericope; the line the
+#     repo prints next to it is its own descriptive prose, not a quotation from
+#     it, which is why it is not in quotation marks and is not a finding.
+#
+#   Jude 9  Michael contending with the devil over the body of Moses. Cited
+#     beside Michael. Correct.
+#
+# Nothing here was found wrong. The file exists because a reference that is
+# right is worth recording as checked - "no finding" is a measurement, and a
+# measurement nobody wrote down gets made again.
+work: "Matthew 18:10, Daniel 12:1, Luke 1:26-38 and Jude 9, King James Version"
+author: "Various - the evangelists Matthew and Luke, the Book of Daniel, and the Epistle of Jude"
+author_born: "unknown - biblical authors, no datable birth"
+author_died: "unknown - biblical authors, no datable death"
+year: 1611
+edition: "King James Version, 1611."
+translator: "The translators of the King James Version, 1611"
+translator_died: "not applicable - a committee of forty-seven translators, all dead since the 17th century; no single death year applies and none is invented here"
+pd_status_us: "The 1611 King James Version is public domain in the United States."
+pd_status_eu: "Public domain in the EU and everywhere outside the United Kingdom, where the King James Version remains under perpetual Crown copyright administered by Cambridge University Press. The repo is published from Germany, so the UK restriction does not reach it."
+source_url: "https://biblehub.com/kjv/matthew/18.htm"
+provenance: verified
+quotes:
+  - "Take heed that ye despise not one of these little ones; for I say unto you, That in heaven their angels do always behold the face of my Father which is in heaven."
+  - "And at that time shall Michael stand up, the great prince which standeth for the children of thy people"
+  - "And in the sixth month the angel Gabriel was sent from God unto a city of Galilee, named Nazareth"
+  - "The messenger of the annunciation, who delivers the true word, exactly."
+  - "The guardian angel who never leaves your side."
+  - "The captain of the host, who weighs before he strikes and draws his sword only in defense."
+  - "The archangel who commands the host of heaven and guards God's people, who weighs before he strikes and draws his sword only in defense."
+  - "The messenger delivers the word as it was given, not as it would please the hearer."
+  - "The vigil that never leaves the traveler's side until the road is finished."

@@ -1,0 +1,38 @@
+# "Quis ut Deus?" IS NOT IN ANY OF THE THREE VERSES CITED NEXT TO IT.
+#
+# CODEX.md and REFERENCE.md both print:
+#
+#   *"Quis ut Deus?" - "Who is like God?"* ... - Rev 12:7; Dan 12:1; Jude 1:9
+#
+# The three references are correct as the places where Michael appears in the
+# canon: Revelation 12:7 ("And there was war in heaven: Michael and his angels
+# fought against the dragon"), Daniel 12:1 (Michael the great prince) and
+# Jude 9 (Michael contending with the devil over the body of Moses). Verified
+# 2026-09-10 against the Wikisource King James text.
+#
+# But the Latin phrase is in none of them. "Quis ut Deus" is the literal Latin
+# translation of the Hebrew name Michael, mi-ka-el, "who is like God" - a gloss
+# of the name, not a line of scripture. It appears on Michael's shield in
+# Western art and as the motto of the Bavarian Order of Saint Michael, founded
+# 1693. Setting it in quotation marks immediately before a chapter-and-verse
+# list reads as if the verses were its source. They are not.
+#
+# This is the smallest finding in the repo and the least likely to be caught,
+# because everything in the line is individually true. It is recorded so that
+# the epigraph can be read as what it is: a name being translated, followed by
+# the passages about the one who bears it.
+work: "Quis ut Deus - the Latin gloss of the Hebrew name Michael; and the three canonical Michael passages"
+author: "Anonymous - a traditional Latin rendering of a Hebrew name, with the scriptural loci as noted"
+author_born: "not applicable - a translated name, not an authored text"
+author_died: "not applicable - a translated name, not an authored text"
+year: 1693
+edition: "The phrase is traditional in Western art and was the motto of the Order of Saint Michael (Bavaria), founded 1693. The three verse references are Revelation 12:7, Daniel 12:1 and Jude 9, King James Version, 1611."
+pd_status_us: "A Latin rendering of a Hebrew name, in use for centuries, and three King James verses of 1611 - public domain."
+pd_status_eu: "Anonymous, traditional, and pre-modern - public domain. The King James text is public domain everywhere outside the United Kingdom, where it remains under perpetual Crown copyright; the repo is published from Germany."
+source_url: "https://en.wikipedia.org/wiki/Quis_ut_Deus"
+provenance: unverified
+provenance_note: "The three verse references are correct as the canonical Michael passages and were checked. What could NOT be confirmed is the implied source of the Latin: 'Quis ut Deus?' appears in none of Revelation 12:7, Daniel 12:1 or Jude 9. It is the literal Latin of the Hebrew name Michael, traditional in art and used as the motto of the Bavarian Order of Saint Michael from 1693. The epigraph places it in quotation marks directly before the verse list, which reads as an attribution it does not have."
+quotes:
+  - "Quis ut Deus?"
+  - "Who is like God?"
+  - "And there was war in heaven: Michael and his angels fought against the dragon; and the dragon fought and his angels,"
