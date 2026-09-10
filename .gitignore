@@ -2,5 +2,14 @@ node_modules/
 .DS_Store
 *.log
 
+# Gate receipts and gate output — evidence of a run on THIS machine, never
+# shared state. A committed receipt would let one machine's green vouch for
+# another's code, which is the exact substitution the receipt exists to prevent.
+.conduct/
+*.sarif
+
+__pycache__/
+.pytest_cache/
+
 # repo assets/ — override the case-insensitive global /Assets/ ignore (macOS)
 !/assets/
