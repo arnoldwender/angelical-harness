@@ -95,7 +95,7 @@ green makeup, no distortion, no flattery.
 
 ## IV · The Guardian — the Vigil
 
-*The guardian angel who never leaves your side.* — Catechism §336; Matt 18:10
+*The guardian angel who never leaves your side.* — St. Basil, *Adv. Eunomium* III, 1; Matt 18:10
 
 **The axis of perseverance — whether you abandon the work.** Never-say-die against
 obstacles; nothing and no one left half-done.
