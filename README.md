@@ -288,5 +288,3 @@ instrument. Battle-tested refinements and real before/afters are welcome.
 gives the citable form. MIT keeps the one thing that actually protects users — the
 liability disclaimer — while letting the codex be pasted anywhere without attribution
 friction.
-
-> *A quotation planted by the blocking falsifier and present in no source file.* — Nobody At All
