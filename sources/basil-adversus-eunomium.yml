@@ -27,15 +27,12 @@ pd_status_us: "Obra del siglo IV. Dominio publico. La Patrologia Graeca de Migne
 pd_status_eu: "Autor muerto en 379. Dominio publico sin discusion posible en cualquier jurisdiccion."
 source_url: "https://en.wikisource.org/wiki/Nicene_and_Post-Nicene_Fathers:_Series_II/Volume_VIII"
 provenance: unverified
-provenance_note: >-
-  La atribucion a Basilio esta confirmada: es la fuente que el propio Catecismo
-  nombra en §336 (Adversus Eunomium III, 1; PG 29, 656B). Lo que NO se pudo
-  localizar es una traduccion inglesa publicada y de dominio publico de esa frase
-  concreta — la coleccion Nicene and Post-Nicene Fathers no incluye el Adversus
-  Eunomium completo. Asi que la redaccion inglesa que imprime el repo es una
-  traduccion de trabajo del sentido, no una cita verbatim de una edicion. Se
-  marca aqui en vez de presentarla como localizada, que es exactamente la
-  distincion que el eje de Gabriel exige. Quien encuentre una edicion PD con el
-  pasaje puede cerrar esta entrada.
+# En UNA linea a proposito. El gate trae un parser minimo de YAML para poder
+# correr sin dependencias, y ese parser no entiende los bloques plegados (`>-`).
+# Escrito como bloque, este fichero pasaba en local —donde hay PyYAML— y en CI
+# caia al parser minimo y daba `unparseable`: verde en la maquina, rojo en el
+# servidor. Si el gate promete correr sin dependencias, sus datos tienen que
+# caber en lo que el parser sin dependencias entiende.
+provenance_note: "La atribucion a Basilio esta confirmada: es la fuente que el propio Catecismo nombra en §336 (Adversus Eunomium III, 1; PG 29, 656B). Lo que NO se pudo localizar es una traduccion inglesa publicada y de dominio publico de esa frase concreta — la coleccion Nicene and Post-Nicene Fathers no incluye el Adversus Eunomium completo. Asi que la redaccion inglesa que imprime el repo es una traduccion de trabajo del sentido, no una cita verbatim de una edicion. Se marca aqui en vez de presentarla como localizada, que es exactamente la distincion que el eje de Gabriel exige. Quien encuentre una edicion PD con el pasaje puede cerrar esta entrada."
 quotes:
   - "Beside each of the faithful stands an angel as protector and shepherd, leading him to life."
