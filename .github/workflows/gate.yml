@@ -41,9 +41,12 @@ jobs:
       # Placed first, before anything writes a receipt or touches an mtime. It
       # reads the tree and writes only a .sarif, which report_truth already
       # excludes from "newest source", so it cannot disturb the ordering below.
-      # PyYAML is deliberately NOT installed: the gate carries a fallback parser
-      # for exactly this container, and running it here is what keeps that path
-      # from rotting unnoticed.
+      # PyYAML is deliberately NOT installed, and there is no fallback to keep
+      # from rotting: the gate parses sources/*.yml with a parser it ships
+      # itself, in every environment. This repo paid for that lesson — a source
+      # file written with a folded block (`>-`) passed on the author's machine,
+      # where PyYAML was installed and the gate preferred it, and failed here,
+      # where it was not. Published, and red. One parser now.
       - name: Citation gate (every quotation traces to sources/)
         run: python3 gate/citations.py --sarif citations.sarif
 
