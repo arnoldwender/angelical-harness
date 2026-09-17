@@ -113,6 +113,10 @@ because work begun under blessing is work you hold yourself to.
   word and the conduct block at the top of every session — see [hooks/](hooks/).
 - **Keep your functional layer named technically** — agents, skills, commands, by what
   they do.
+- **Or install it as an Agent Skill.** [`SKILL.md`](SKILL.md) packages the same block in the
+  [Agent Skills](https://agentskills.io/specification) format: clone this repository into your
+  agent's skills directory as `angelical-harness/` (the directory name must match the skill name).
+  Verified on Claude Code 2.1.273 (2026-09-17); other hosts that read the format were not run.
 - **Always active; intensity scales with the stakes.** No trigger phrase, every session,
   every sub-agent. Intensity scales to the task (a hotfix heals the minimum; an audit only
   reports).
