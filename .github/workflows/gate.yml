@@ -68,6 +68,11 @@ jobs:
       - name: Mutation check (do the tests defend the gate?)
         run: python3 tests/mutation_check.py
 
+      - name: Mutation check (do the tests defend the live hook?)
+        # Mutates a scratch COPY of the hook, never the file in the tree, so it
+        # moves no mtime that the receipts below would then be older than.
+        run: python3 tests/mutation_check_report_truth_hook.py
+
       - name: Self-check, under a receipt
         run: bin/conduct-receipt run check -- python3 scripts/check.py
 
@@ -99,6 +104,13 @@ jobs:
             exit 1
           fi
           echo "the gate rejected the fabricated handback, as it must"
+
+      - name: Live hook (a planted invented path at Stop is handed back to the agent)
+        # The runtime's own payload shape, once, end to end, in a scratch tree
+        # with one fresh receipt: the hook must feed the finding back, not stay
+        # silent and not fail. Runs after the receipt steps and touches nothing
+        # in this tree.
+        run: python3 tests/live_hook_smoke.py
 
       - name: Upload SARIF
         if: always()
