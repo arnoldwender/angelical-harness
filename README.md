@@ -111,6 +111,10 @@ because work begun under blessing is work you hold yourself to.
   layer.
 - **Or wire the hook.** [`hooks/session-start.sh`](hooks/session-start.sh) emits the first
   word and the conduct block at the top of every session — see [hooks/](hooks/).
+- **And the live one.** [`hooks/report-truth-at-stop.py`](hooks/report-truth-at-stop.py) runs
+  Gabriel's gate on the message the agent leaves when its turn ends, wherever
+  `.conduct/receipts.jsonl` exists, and hands a claim the tree cannot redeem back to the agent —
+  see [hooks/](hooks/) and *Live, when the agent stops* below.
 - **Keep your functional layer named technically** — agents, skills, commands, by what
   they do.
 - **Or install it as an Agent Skill.** [`SKILL.md`](SKILL.md) packages the same block in the
@@ -176,6 +180,8 @@ with translations, is in [BLESSING.md](BLESSING.md); the emitter is
   refuses a report that claims more than the run supports. See below.
 - **[bin/conduct-receipt](bin/conduct-receipt)** — the evidence layer the gate reads. Wraps
   any command and writes down its real exit code.
+- **[hooks/report-truth-at-stop.py](hooks/report-truth-at-stop.py)** — the same gate at Stop,
+  on the hand-back itself, wherever receipts exist. See below.
 - **[tests/](tests/)** — the suite, plus
   [`mutation_check.py`](tests/mutation_check.py), which deletes each check in turn and
   requires the suite to go red.
@@ -278,11 +284,44 @@ a reader.
 Saying so is not a caveat bolted onto the section. It *is* the axis: name what you could
 not verify, and never let UNCERTAIN wear the face of CONFIRMED.
 
+### Live, when the agent stops — `hooks/report-truth-at-stop.py`
+
+The gate reads a report file after the fact. The hand-back the human actually reads is the
+message the agent leaves when its turn ends — so the same gate also runs as a Claude Code
+`Stop` hook. It takes `last_assistant_message` from the Stop payload, roots the gate at the
+working directory, and if the message claims more than the tree and the receipts support,
+hands the finding back to the agent so the report is corrected before anyone reads it:
+
+> report-truth: this hand-back claims more than the tree and the receipts support. [fabricated-path] line 1: the report cites `src/zzz_missing.py`, which exists nowhere in the tree [unbacked-number] line 1: "987654 tests" appears in no receipt's output — a count that came out of no run came out of nowhere Gabriel, the Message: the state you hand back is the true state. Name what you could not verify, never let UNCERTAIN wear the face of CONFIRMED — correct the claim or the report before it is read. A token that is genuinely fine goes in .conduct/report-allow.txt.
+
+**Only where the evidence layer exists.** The hook judges only when `.conduct/receipts.jsonl`
+is present. Without receipts every green claim is unbacked by construction — that is the gate's
+thesis, and it is right in CI — but a Stop hook that sent the agent round on every "done" in
+every repository that never adopted the receipt tool would be uninstalled by lunch, after which
+it catches nothing. Where there are no receipts it records `skipped` and says nothing; adoption
+is one wrapper around your test command.
+
+It feeds the agent by default, because the agent is the one who wrote the report and the one
+who can still fix it — with the family's three brakes (`stop_hook_active`, no second feed of
+the same finding, the runtime's cap of eight continuations), and `notify` and `block` modes
+for whoever wants the human told instead. The gate's own exit 2 is silence and a
+`gate-failure` receipt, never "clean". Wiring, receipts and limits in [hooks/](hooks/); 22
+tests and 6 mutants, each killed, in [`tests/`](tests/).
+
+**What cannot be measured here, said plainly:** the family's `PreToolUse` hooks report a
+false-positive rate replayed over recorded sessions. A Stop hook has no such replay — a
+session's tool calls are recorded, the tree and the receipts at each Stop are not — so this
+hook's rate can only be read from its own receipts once it has run: `verdict: finding` against
+`ok` and `skipped` in `~/.local/state/angelical-harness/report-truth-receipts.jsonl`. That is
+the number, and it is not in this README because nothing produced it yet.
+
 ## Status
 
 Early, but real. The Codex core (v1.0) is stable, and the reference wiring ships with it: a
 session-start hook that opens every run blessed and keeps the axes present
-([hooks/](hooks/)), a starter agent set ([agents/](agents/)), and a worked before/after
+([hooks/](hooks/)), a Stop hook that runs Gabriel's gate on the hand-back itself wherever
+receipts exist ([`hooks/report-truth-at-stop.py`](hooks/report-truth-at-stop.py)), a starter
+agent set ([agents/](agents/)), and a worked before/after
 example ([EXAMPLE.md](EXAMPLE.md)) — the example is what turns a codex from manifesto into
 instrument. Battle-tested refinements and real before/afters are welcome.
 
